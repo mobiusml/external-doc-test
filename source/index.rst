@@ -3,7 +3,7 @@
    Index file for the external doc project for the Mobius Labs SDK.
 
 Welcome to the documentation of the Mobius computer vision SDK!
-============================================
+====================================================================
 
 .. toctree::
    :maxdepth: 2

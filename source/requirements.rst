@@ -1,5 +1,5 @@
 Requirements for the Mobius SDK
-==================
+==========================================
 
 Due to the advanced models, we have some requirements for using the mobile SDK.
 There are Requirements on the hardware and the software.
