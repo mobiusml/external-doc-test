@@ -2,25 +2,41 @@
    sphinx-quickstart on Thu Mar  8 11:26:18 2018.
    Index file for the external doc project for the Mobius Labs SDK.
 
+
+
 Introduction
 ==================
-This SDK by Mobius Labs is for Computer Vision applications.
-Features we currently offer:
+This SDK by Mobius Labs is for Computer Vision applications. It provides customisable image analysis power.
 
-* Assign top k keywords for one image
-* Assign aesthetics score to quantify the beauty of an image
-* Customise the provided models with own styles or keywords
+.. todo::
+
+  rewrite introduction
 
 
-Welcome to the documentation of the Mobius computer vision SDK!
-====================================================================
+We currently offer four modules:
+
+* Keywording module: Tag images with more than 5000 general keywords
+* Aesthetics module: Estimate image aesthetics (based on professional curators' style)
+* Search module: Return similar images given query image or keywords
+* Customisation module: Add custom keywords and/or style
+
+.. image::
+   data/overviewSDK.png
+   :height: 400 px
+   :width: 600 px
+   :align: left
+
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   requirements
+   about-tech
    installation
    getting-started
-   example-images
+   image-search
+   advanced-training
+   best-practices
+   faq
    about-mobius

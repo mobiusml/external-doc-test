@@ -41,7 +41,14 @@ release = 'v1'
 extensions = [
     'sphinx.ext.imgmath',
     'sphinx.ext.githubpages',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.todo'
 ]
+
+html_copy_source = True
+
+markdown_search = True
+markdown_extensions = ['gfm']  # Github Flavored Markdown (pip install py-gfm)
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -158,3 +165,14 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+
+# Include todos
+todo_include_todos = True
+
+rst_prolog = """
+    .. |sdk_name| replace:: Mobius SDK
+    .. |model| replace:: Filter
+    .. highlight:: java
+    .. role:: java(code)
+        :language: java
+"""
