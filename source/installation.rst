@@ -19,8 +19,20 @@ There are the following requirements:
 Installation procedure
 -------------------------
 
-The SDK will be probably delivered as an AAR.
-Adding the AAR into an Android Studio project can be done by simply:
+The SDK is delivered as an AAR. Adding the AAR into an Android Studio project can
+be done by simply opening the project structure and add a new module "Import .JAR or
+.AAR Package", or adding the aar file to a directory (for example 'libs') and use flatDir in your build.gradle :
 
-* opening the project structure 
-* add a new module "Import .JAR or .AAR Package"
+::
+
+  allprojects {
+      repositories {
+          ...
+          flatDir{ dirs 'libs' } //here the aar file is in the libs directory
+      }
+  }
+
+  dependencies {
+  ...
+  compile(name:'vision-debug', ext:'aar')
+  }

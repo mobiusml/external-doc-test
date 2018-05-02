@@ -26,11 +26,6 @@ Prediction
 The predict function takes as input an image and returns a result object. This function
 returns a prediction
 
-.. image::
-   data/function_overview_prediction.png
-   :height: 250 px
-   :width: 500 px
-   :align: center
 
 
 
@@ -43,7 +38,7 @@ These *pre-trained modules* can be used to obtain predictions for a wide range o
 Illustration of the prediction feature for keywording and aesthetics:
 
 .. image::
-   data/prediction.png
+   data/prediction_public_models.png
    :height: 400 px
    :width: 600 px
    :align: left
