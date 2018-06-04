@@ -10,14 +10,16 @@ To load the SDK, create one instance of the :java:`MobiusSDK` class inside your 
 ::
 
   public class MainActivity extends AppCompatActivity {
-      MobiusSDK mobiusSDKInstance;
-      ...
-      mobiusSDKInstance = new MobiusSDK(this.getAssets());
-      //Check if the SDK was correctly loaded
-      if (!mobiusSDKInstance.isValid()){...}
-      ...
+    ...
+    MobiusSDK.load(this.getAssets());
+    //Check if the SDK was correctly loaded
+    if (!MobiusSDK.isOperational()){...}
+    ...
   }
 
+.. note::
+
+  Almost all the parameters are @NonNull to prevent the user from passing null parameters.
 
 Prediction
 -----------
@@ -50,7 +52,7 @@ This is an example for prediction:
 
 ::
 
-  KeywordingResult keywordingResult = mobiusSDKInstance.predictKeywords(bitmap);
+  KeywordingResult keywordingResult = MobiusSDK.predictKeywords(bitmap);
   //Returns thresholded results with default threshold
   ArrayList<Keyword> keywords = keywordingResult.getThresholdedResult();
 
@@ -87,7 +89,7 @@ Prediction with the aesthetics module works in a similar fashion.
 
 ::
 
-  AestheticsResult aestheticsResult = mobiusSDKInstance.predictAesthetics(bitmap);
+  AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(bitmap);
   float aestheticsScore = aestheticsResult.getScore(); //Returns normalized aesthetics score
 
 .. todo::
@@ -103,8 +105,8 @@ Prediction with the aesthetics module works in a similar fashion.
 
 ::
 
-  KeywordingResult keywordingResult = mobiusSDKInstance.predictKeywords(float[] keywordingFeatures);
-  AestheticsResult aestheticsResult = mobiusSDKInstance.predictAesthetics(float[] aestheticsFeatures);
+  KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] keywordingFeatures);
+  AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] aestheticsFeatures);
 
 
 
@@ -120,24 +122,24 @@ In this case, you need to specify a key for every trained |model|. If a customiz
   //Loading a custom  model for example (here called mainCustomModelFileName) can done as follows
   String path = this.getFilesDir().getPath() + "/" + mainCustomModelFileName;
   try{
-      mobiusSDKInstance.loadCustomModel(customModelKey, path);} //A new model is automatically created in the SDK
+      MobiusSDK.loadCustomModel(customModelKey, path);} //A new model is automatically created in the SDK
   catch (FailedLoadingModelException e) {...}
   //if the custom model model was already trained
-  if(mobiusSDKInstance.CustomModelisTrained()){
-      float predictedScore = mobiusSDKInstance.predictCustomModel(customModelKey, bitmap).getScore();}
+  if(MobiusSDK.CustomModelisTrained()){
+      float predictedScore = MobiusSDK.predictCustomModel(customModelKey, bitmap).getScore();}
 
 You can also classify by using the default threshold or a custom threshold :
 
 ::
 
-  Boolean prediction = mobiusSDKInstance.predictCustomModel(customModelKey, bitmap).classify(); //default threshold
-  Boolean prediction = mobiusSDKInstance.predictCustomModel(customModelKey, bitmap).classify(0.7f); //custom threshold
+  Boolean prediction = MobiusSDK.predictCustomModel(customModelKey, bitmap).classify(); //default threshold
+  Boolean prediction = MobiusSDK.predictCustomModel(customModelKey, bitmap).classify(0.7f); //custom threshold
 
 If the features are cached, custom model prediction can be much faster by calling predictCustomModel on the features instead of the bitmap :
 
 ::
 
-  float predictedScore = mobiusSDKInstance.predictCustomModel(customModelKey, float[] features).getScore();
+  float predictedScore = MobiusSDK.predictCustomModel(customModelKey, float[] features).getScore();
 
 
 .. note::

@@ -25,7 +25,7 @@ that are extracted from every image (Bitmap) as follows :
 
 ::
 
-  float[] features = mobiusSDKInstance.getCombinedFeatures(bitmap)
+  float[] features = MobiusSDK.getCombinedFeatures(bitmap)
 
 Features for training should be extract for positives and negatives and stored
 separately in an :java:`ArrayList<float[]>`, so the code would be like the following :
@@ -43,7 +43,7 @@ separately in an :java:`ArrayList<float[]>`, so the code would be like the follo
   Arraylist<float[]> trainingFeaturesPos = new ArrayList<>(trainSizePos);
   for (int k = 0; k < trainSizePos; k++){
   loadImageFromFileFromUri(UriListPositiveImages.get(k));
-  trainingFeaturesPos.add(k, mobiusSDKInstance.getCombinedFeatures(bitmap));}
+  trainingFeaturesPos.add(k, MobiusSDK.getCombinedFeatures(bitmap));}
 
 
 Same code for the negatives
@@ -53,7 +53,7 @@ Same code for the negatives
   Arraylist<float[]> trainingFeaturesNeg = new ArrayList<>(trainSizeNeg);
   for (int k = 0; k < trainSizeNeg; k++){
   loadImageFromFileFromUri(UriListNegativeImages.get(k));
-  trainingFeaturesNeg.add(k, mobiusSDKInstance.getCombinedFeatures(bitmap));}
+  trainingFeaturesNeg.add(k, MobiusSDK.getCombinedFeatures(bitmap));}
 
 
 Loading an image from a Uri can be done as follows
@@ -96,9 +96,9 @@ Once the features are extracted, training can be performed as follows:
 
   //If it's called inside an AsyncTask
   protected Void doInBackground(Void... VoidInput) {
-    //mobiusSDKInstance.resetCustomModel(customModelKey);
+    //MobiusSDK.resetCustomModel(customModelKey);
     //If you want to reset the model, otherwise it does fine-tuning
-    mobiusSDKInstance.trainCustomModel(customModelKey, trainingFeaturesPos, trainingFeaturesNeg, new AsyncTaskTrainingProgressCallback(this));
+    MobiusSDK.trainCustomModel(customModelKey, trainingFeaturesPos, trainingFeaturesNeg, new AsyncTaskTrainingProgressCallback(this));
     return null;}
 
 
@@ -114,7 +114,7 @@ The |model| can be saved as follows :
 
 ::
 
-  Boolean success = mobiusSDKInstance.saveCustomModel(customModelKey, getFilesDir().getPath() + "/" + CustomModelFileName);
+  Boolean success = MobiusSDK.saveCustomModel(customModelKey, getFilesDir().getPath() + "/" + CustomModelFileName);
 
 
 
@@ -126,6 +126,6 @@ by calling the :java:`predictCustomModel` function, which returns a result objec
 
 ::
 
-  CustomModelResult result = mobiusSDKInstance.predictCustomModel(customModelKey, float[] features);
+  CustomModelResult result = MobiusSDK.predictCustomModel(customModelKey, float[] features);
   float predictedScore = result.getScore(); //returns score between 0 and 1
   bool classifciationResult = result.classify(); //returns boolean value if query belongs to custom class
