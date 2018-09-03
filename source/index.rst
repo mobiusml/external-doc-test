@@ -2,15 +2,16 @@
    sphinx-quickstart on Thu Mar  8 11:26:18 2018.
    Index file for the external doc project for the Mobius Labs SDK.
 
+.. image::
+  data/green_Mobius_Vision_Logotype.png
+  :align: left
 
-
-Introduction
-==================
-This SDK by Mobius Labs is for Computer Vision applications. It provides customisable image analysis power.
-
-.. todo::
-
-  rewrite introduction
+AI powered Computer Vision that lives on the Edge
+======================================================
+Empower your product with our pre-trained models.
+Our technology is engineered to work on Android smart phones.
+We believe that privacy matters even in the 21st century, and therefore all
+processing happens on the device locally, and not a cloud.
 
 
 We currently offer four modules:
@@ -21,12 +22,8 @@ We currently offer four modules:
 * Customisation module: Add custom keywords and/or style
 
 .. image::
-   data/overviewSDK.png
-   :height: 400 px
-   :width: 600 px
-   :align: left
-
-
+  data/overviewSDK.png
+  :align: left
 
 .. toctree::
    :maxdepth: 2
@@ -39,4 +36,3 @@ We currently offer four modules:
    advanced-training
    best-practices
    faq
-   about-mobius
