@@ -97,18 +97,6 @@ Prediction with the aesthetics module works in a similar fashion.
   wondering if it makes sense to swap aesthetics and keywording since keywording is more complex
 
 
-**Prediction on features**
-
-.. note::
-
-  For both Keywording and Aesthetics, you can do predictions on the features as well instead of the Bitmap image. This is useful when the features are cached in the app to prevent re-processing the images:
-
-::
-
-  KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] keywordingFeatures);
-  AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] aestheticsFeatures);
-
-
 
 Prediction with a customised model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -146,12 +134,38 @@ If the features are cached, custom model prediction can be much faster by callin
 
   the SDK does by default a slight cropping which improves keywording predictions, this cropping is set inside the resizing function in BitmapUtils but can be turned off.
 
-Prediction with large number of images
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Please note that prediction is time consuming. It's recommended to run predictions
-in a separate thread. There is one example in the section of on device training.
+
+Prediction on features
+-------------------------
+
+
+.. note::
+
+  For both Keywording and Aesthetics, you can do predictions on the features as well instead of the Bitmap image. This is useful when the features are cached in the app to prevent re-processing the images:
+
+::
+
+  KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] keywordingFeatures);
+  AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] aestheticsFeatures);
+
+
+Prediction with large number of images
+-----------------------------------------
+
+For many applications there might be a need to process many images. Prediction
+is much faster than training a model, yet it is computationally expensive.
 
 .. todo::
 
-  put reference here - maybe little note / warning
+  put number or chart here
+
+Here is one example for prediction:
+
+.. warning::
+
+  Prediction is time consuming! It's recommended to run predictions in a separate thread.
+
+.. todo::
+
+  put code here
