@@ -167,10 +167,10 @@ texinfo_documents = [
 # -- Extension configuration -------------------------------------------------
 
 # Include todos
-todo_include_todos = True
+todo_include_todos = False
 
 rst_prolog = """
-    .. |sdk_name| replace:: Mobius SDK
+    .. |sdk_name| replace:: Mobius Vision Android SDK
     .. |model| replace:: Filter
     .. highlight:: java
     .. role:: java(code)
