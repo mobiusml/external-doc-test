@@ -7,13 +7,14 @@ Before you can use the Mobius mobile SDK, the installation has to be completed a
 Requirements for the Mobius mobile SDK
 -----------------------------------------
 
-We have some technical requirements on the hardware and the software for using the SDK.
+In order to run functions of the SDK on a mobile device, there are some technical requirements on the hardware and the software.
 
-There are the following requirements:
+Full requirements list:
 
-*   architectures "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-*   Android > 7.0
-*   Python 2.7 (or 3.3+ for Python 3)
+*   architectures: "armeabi-v7a", "arm64-v8a", "x86" or "x86_64"
+*   Android 7.0 or higher
+*   For Python 2, version 2.7
+*   For Pyhton 3, version 3.3 or higher
 
 Installation procedure
 -------------------------
@@ -22,8 +23,8 @@ The SDK is delivered as an AAR. In order to use functions of the SDK, the AAR ha
 
 We recommend to choose either of the following methods:
 
-*   A: open the project structure, select option to add a new module "Import .JAR or .AAR Package" and select the Mobius Vision aar file. 
-*   B: move the AAR file to a directory (for example 'libs') and use flatDir in your build.gradle :
+*   Option A: open the project structure, select option to add a new module "Import .JAR or .AAR Package" and select the Mobius Vision aar file. 
+*   Option B: move the AAR file to a directory (for example 'libs') and use flatDir in your build.gradle :
 
 ::
 
