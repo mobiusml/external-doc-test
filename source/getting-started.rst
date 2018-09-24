@@ -17,16 +17,13 @@ To load the SDK, create one instance of the :java:`MobiusSDK` class inside your 
     ...
   }
 
-.. note::
 
-  Almost all the parameters are @NonNull to prevent the user from passing null parameters.
 
 Prediction
 -----------
 
 
-The predict function takes as input an image and returns a result object. This function
-returns a prediction
+The predict function takes as input an image and returns a result object. 
 
 
 
