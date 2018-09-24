@@ -34,7 +34,7 @@ How can I test the functions of the SDK without getting a license?
 Please contact us to get access to our Android demo app that showcases SDK functionalities.
 
 
-Error messages and warnings
-----------------------------
+Exceptions and how to solve them
+----------------------------------
 
 
