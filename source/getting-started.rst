@@ -19,17 +19,17 @@ To load the SDK, create one instance of the :java:`MobiusSDK` class inside your 
 
 
 
-Prediction
------------
+Prediction overview
+---------------------
 
 
 The predict function generally takes an image as input and returns a result object. The result objects vary according to the use case. When using the keywording model, a :java:`KeywordingResult` object will be returned. Please also refer to the illustration below for details. 
 
-
+.. prediction illustration here
 
 
 Prediction with Pre-trained Modules
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 |sdk_name| is shipped with two modules that were trained on our large image dataset.
 These *pre-trained modules* can be used to obtain predictions for a wide range of applications.
@@ -43,7 +43,8 @@ Illustration of the prediction feature for keywording and aesthetics:
    :align: left
 
 
-**Keywording**
+Keywording
+^^^^^^^^^^^^^^
 
 This is an example for prediction with our standard keywording model:
 
@@ -93,7 +94,8 @@ the same number of keywords for any image.
 
   ProTip: It's possible to use a conservative threshold or k value for keywording to only display keywords with very high confidence while still making the images searchable with a large number of tags. This SDK comes with a search function that uses the extracted features instead of the plain output tags for search. Therefore, it is possible to find an image for a query keyword although that query keyword was not returned in the prediction step. 
 
-**Aesthetics**
+Aesthetics
+^^^^^^^^^^^
 
 Prediction with the aesthetics module works in a similar manner as the keywording module. Also in this case a specific :java:`AestheticsResult` object is returned from the predictAesthetics function of the |sdk_name|. 
 
@@ -125,7 +127,7 @@ Caching of features can be very useful since the method for extracting the featu
   Put cache example code here
 
 Prediction with a customised model
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 This SDK also offers the option to train custom models on top of our pre-trained models. If a custom model has been just trained or a trained model has been loaded the procedure is slightly different compared to the previous sections.
 
@@ -155,6 +157,7 @@ If the features are cached, custom model prediction can be much faster by callin
 
   float predictedScore = MobiusSDK.predictCustomModel(customModelKey, float[] features).getScore();
 
+You can also use features to predict with a customized model. 
 
 .. (Prediction with large number of images)
 
