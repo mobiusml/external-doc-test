@@ -104,23 +104,21 @@ Prediction with the aesthetics module works in a similar manner as the keywordin
 
 .. note::
 
-  The aesthetics score is normalized, that means that it will always be a value between 0 and 1 which only depends on the quality of the single input image to this function. 
+  The aesthetics score is normalized, that means that it will always be a value between 0 and 1 which only depends on the aesthetics of the input image to this function. 
 
 
 Prediction on features
 -------------------------
 
 
-.. note::
-
-  For both Keywording and Aesthetics, you can do predictions on the features as well instead of the Bitmap image. This is useful when the features are cached in the app to prevent re-processing the images:
+For both Keywording and Aesthetics, you can do predictions on the features as well instead of the Bitmap image like this:
 
 ::
 
   KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] keywordingFeatures);
   AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] aestheticsFeatures);
 
-Caching of features can be very useful since the method for extracting the features from a bitmap is computationally very expensive. Using the features for prediction is computationally far less expensive. Keeping the features in cache is also necessary when using the builtin search function of the SDK and training custom models. 
+Caching of features can be very useful since the method for extracting the features from a bitmap is computationally very expensive. Using the features for prediction is computationally far less expensive. In a case where predictions would be carried out repeatedly on the same image, caching can be used to significantly speeding up the processing. Keeping the features in cache is also necessary when using the builtin search function of the SDK and training custom models. 
 
 .. todo::
 
