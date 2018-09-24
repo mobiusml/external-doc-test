@@ -23,7 +23,7 @@ Prediction
 -----------
 
 
-The predict function takes as input an image and returns a result object. The result objects vary according to the use case. When using the keywording model, a :java:`KeywordingResult` object will be returned. 
+The predict function generally takes an image as input and returns a result object. The result objects vary according to the use case. When using the keywording model, a :java:`KeywordingResult` object will be returned. Please also refer to the illustration below for details. 
 
 
 
@@ -57,7 +57,7 @@ From the returned :java:`KeywordingResult` object an ArrayList can be extracted 
 
 .. note::
 
-  The default threshold is 0.55. For a keyword to be returned, the model has to have at least 55% confidence that this keyword is present in the image. It is possible to set a custom threshold by passing a float value to the function :java:`getThresholdedResult(custom_value_float)`. However, this float value should be greater than 0 and smaller than 1. 
+  The default threshold is 0.55. That means that for a keyword to be returned, the model has to have at least 55% confidence that this keyword is present in the image. It is possible to set a custom threshold by passing a float value to the function like this: :java:`getThresholdedResult(0.6)`. This float value should be greater than 0 and smaller than 1. 
 
 You can get a particular label(String) or confidence(Float) from the list as follows :
 
@@ -66,15 +66,17 @@ You can get a particular label(String) or confidence(Float) from the list as fol
   String label = keywords.get(i).getLabel(); 
   Float confidence = keywords.get(i).getConfidence(); //confidence of the model in the keyword
 
+The confidence can be understood as a percentage of how certain the model is that this keyword belongs to the image. In a very broad sense our model is trained to return basic keywords such as 'people', 'animals' or 'outdoors' with high confidence, while very specific keywords are returned with lower confidence. 
+
 .. note::
 
   For some simple images, the keywording module might only recognise a small number of matching keywords.
   However, in cluttered scenes, there might be a long list of matching keywords. Depending of the image, the number
-  of returned keywords might vary. If no keywords are returned this might mean that the threshold was too high and there was no keyword where the model was sufficiently confident to present as result.
+  of returned keywords might vary. If no keywords are returned this might mean that the threshold was too high and there was no keyword where the model was sufficiently confident to return as result.
 
 
 There is also a function to obtain the top k keywords ordered descending according to the confidence. This function returns
-the same number of keywords in every call.
+the same number of keywords for any image.
 
 ::
 
@@ -86,6 +88,10 @@ the same number of keywords in every call.
 .. note::
 
   It is theoretically possible to select an integer value between 1 and the total number of keywords in the model. However, large values of k are likely to result in a large number of keywords will low confidence and therefore it is more likely to see wrong labels. The value of k should be carefully adjusted according to the use case and image data. 
+  
+.. note::
+
+  ProTip: It's possible to use a conservative threshold or k value for keywording to only display keywords with very high confidence while still making the images searchable with a large number of tags. This SDK comes with a search function that uses the extracted features instead of the plain output tags for search. Therefore, it is possible to find an image for a query keyword although that query keyword was not returned in the prediction step. 
 
 **Aesthetics**
 
@@ -114,6 +120,11 @@ Prediction on features
   KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] keywordingFeatures);
   AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] aestheticsFeatures);
 
+Caching of features can be very useful since the method for extracting the features from a bitmap is computationally very expensive. Using the features for prediction is computationally far less expensive. Keeping the features in cache is also necessary when using the builtin search function of the SDK and training custom models. 
+
+.. todo::
+
+  Put cache example code here
 
 Prediction with a customised model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -145,11 +156,6 @@ If the features are cached, custom model prediction can be much faster by callin
 ::
 
   float predictedScore = MobiusSDK.predictCustomModel(customModelKey, float[] features).getScore();
-
-
-
-
-
 
 
 Prediction with large number of images
