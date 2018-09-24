@@ -156,22 +156,8 @@ If the features are cached, custom model prediction can be much faster by callin
   float predictedScore = MobiusSDK.predictCustomModel(customModelKey, float[] features).getScore();
 
 
-Prediction with large number of images
------------------------------------------
+[//]: # (Prediction with large number of images)
 
-For many applications there might be a need to process many images. Prediction
-is much faster than training a model, yet it is computationally expensive.
 
-.. todo::
+[//]: # (For many applications there might be a need to process many images. Prediction is much faster than training a model, yet it is computationally expensive. This section would need a code snippet)
 
-  put number or chart here
-
-Here is one example for prediction:
-
-.. warning::
-
-  Prediction is time consuming! It's recommended to run predictions in a separate thread.
-
-.. todo::
-
-  put code here
