@@ -16,14 +16,14 @@ processing happens on the device locally, and not a cloud.
 
 
 .. csv-table:: Product overview
-   :header: "Product name", "Functionality", "Available on"
+   :header: "Product name", "Functionality", "Version"
    :widths: 10, 40, 10
 
-   "Keywording", "Tag images with more than 5000 general keywords", "Android CPU, Android Snapdragon, iOS, On Premise"
-   "Aesthetics", "Estimate image aesthetics (based on professional curators' style)", "Android CPU, On Premise"
-   "Keyword search", "Search for similar images in the feature space of a query keyword", "Android CPU"
-   "Similarity search", "Search for similar images in the feature space by a query image", "Android CPU, On Premise"
-   "Customization", "Add custom keywords and/or style", "Android CPU, On Premise"
+   "Keywording", "Tag images with more than 5000 general keywords", "v1"
+   "Aesthetics", "Estimate image aesthetics (based on professional curators' style)", "v1"
+   "Keyword search", "Search for similar images in the feature space of a query keyword", "v1"
+   "Similarity search", "Search for similar images in the feature space by a query image", "v1"
+   "Customization", "Add custom keywords and/or style", "v1"
 
 
 .. toctree::
