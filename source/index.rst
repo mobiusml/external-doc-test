@@ -14,16 +14,17 @@ We believe that privacy matters even in the 21st century, and therefore all
 processing happens on the device locally, and not a cloud.
 
 
-We currently offer four modules:
 
-* Keywording module: Tag images with more than 5000 general keywords
-* Aesthetics module: Estimate image aesthetics (based on professional curators' style)
-* Search module: Return similar images given query image or keywords
-* Customisation module: Add custom keywords and/or style
+.. csv-table:: Product overview
+   :header: "Product name", "Functionality", "Available on"
+   :widths: 10, 40, 10
 
-.. image::
-  data/overviewSDK.png
-  :align: left
+   "Keywording", "Tag images with more than 5000 general keywords", "Android CPU, Android Snapdragon, iOS, On Premise"
+   "Aesthetics", "Estimate image aesthetics (based on professional curators' style)", "Android CPU, On Premise"
+   "Keyword search", "Search for similar images in the feature space of a query keyword", "Android CPU"
+   "Similarity search", "Search for similar images in the feature space by a query image", "Android CPU, On Premise"
+   "Customization", "Add custom keywords and/or style", "Android CPU, On Premise"
+
 
 .. toctree::
    :maxdepth: 2
