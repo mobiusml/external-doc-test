@@ -1,38 +1,45 @@
 Installation
 ==================
 
-Before you can use the Mobius mobile SDK, you have to follow a few steps as explained here.
+Before you can use the Mobius mobile SDK, the installation has to be completed as explained here.
 
 
 Requirements for the Mobius mobile SDK
 -----------------------------------------
 
-Due to the advanced models, we have some requirements for using the mobile SDK.
-There are Requirements on the hardware and the software.
+In order to run functions of the SDK on a mobile device, there are some technical requirements on the hardware and the software.
 
-There are the following requirements:
+Full requirements list:
 
-*   Android > 7.0
-*   architectures "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-*   Python 2.7 (or 3.3+ for Python 3)
+*   architectures: "armeabi-v7a", "arm64-v8a", "x86" or "x86_64"
+*   Android 7.0 or higher
+*   For Python 2, version 2.7
+*   For Pyhton 3, version 3.3 or higher
 
 Installation procedure
 -------------------------
 
-The SDK is delivered as an AAR. Adding the AAR into an Android Studio project can
-be done by simply opening the project structure and add a new module "Import .JAR or
-.AAR Package", or adding the aar file to a directory (for example 'libs') and use flatDir in your build.gradle :
+The SDK is delivered as an AAR. In order to use functions of the SDK, the AAR has to be added into an Android Studio project.  
+
+We recommend to choose either of the following methods:
+
+*   Option A: open the project structure, select option to add a new module "Import .JAR or .AAR Package" and select the Mobius Vision aar file. 
+*   Option B: move the AAR file to a directory (for example 'libs') and use flatDir in your build.gradle :
 
 ::
 
+  // Code for option B
   allprojects {
       repositories {
           ...
-          flatDir{ dirs 'libs' } //here the aar file is in the libs directory
+          flatDir{ dirs 'libs' } //in this example the aar file is in the libs directory
       }
   }
 
   dependencies {
   ...
-  compile(name:'vision-debug', ext:'aar')
+  compile(name:'mobius-vision', ext:'aar')
   }
+
+
+That's it! You can test the SDK with instructions from the next section. 
