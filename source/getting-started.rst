@@ -117,8 +117,8 @@ For both Keywording and Aesthetics, you can do predictions on the features as we
 
 ::
 
-  KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] keywordingFeatures);
-  AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] aestheticsFeatures);
+  KeywordingResult keywordingResult = MobiusSDK.predictKeywords(float[] combinedFeatures);
+  AestheticsResult aestheticsResult = MobiusSDK.predictAesthetics(float[] combinedFeatures);
 
 Caching of features can be very useful since the method for extracting the features from a bitmap is computationally very expensive. Using the features for prediction is computationally far less expensive. In a case where predictions would be carried out repeatedly on the same image, caching can be used to significantly speeding up the processing. Keeping the features in cache is also necessary when using the builtin search function of the SDK and training custom models. 
 
