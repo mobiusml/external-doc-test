@@ -9,17 +9,13 @@ It gives computers some sense of hierarchical understanding on the content of im
 
 With this hierarchical understanding, computers can recognize complex objects in images.
 
-*hierarchical object recognition visualization*
-
 The SDK is shipped with two base models and a customizable mini-model that is built on top of the base models.
 The reasoning behind this set up is that customization needs far less effort as the base models already include
 lots of knowledge which can be leveraged directly for new objects or styles.
 
 Additionally, this SDK is specifically for mobile phones.
 
-.. todo::
-
-  improve text on mobile stuff
+.. improve text on mobile stuff
 
 Object recognition with keywords
 ------------------------------------
@@ -43,11 +39,7 @@ Aesthetics evaluation
 
 The second model that is included in the Mobius mobile SDK is a model to evaluate the aesthetics of an image.
 
-*some kind of aesthetics illustration here*
-
-.. todo::
-
-  improve text on aesthetics model
+.. improve explanation here
 
 Customizable mini-model
 ------------------------
