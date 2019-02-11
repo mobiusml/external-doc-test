@@ -6,3 +6,13 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
 .wy-nav-content {
 max-width: 1000px !important;
 }
+
+td:nth-child(1) {
+    width: 30%;
+}
+td:nth-child(2) {
+    width: 30%;
+}
+td:nth-child(3) {
+    width: 30%;
+}
