@@ -7,7 +7,7 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: General
+  :caption: Overview
 
   landing_page
   installation
@@ -15,7 +15,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Image Features
+   :caption: Image Modules
 
    image-about-tech
    image-prediction
@@ -25,14 +25,15 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Video Features
+   :caption: Video Modules
 
    video_about-tech
    video_keywording
 
 .. toctree::
    :maxdepth: 2
-   :caption: Video Features
+   :caption: Misc
 
    best-practices
+   exception_list
    faq
