@@ -22,8 +22,8 @@ def setup(app):
 # -- Project information -----------------------------------------------------
 
 project = 'sdk_external_doc'
-copyright = '2018, Isabel'
-author = 'Isabel'
+copyright = '2018, Mobius Labs GmbH'
+author = 'Mobius Labs'
 
 # The short X.Y version
 version = ''
@@ -174,6 +174,9 @@ todo_include_todos = False
 rst_prolog = """
     .. |sdk_name| replace:: Mobius Vision Android SDK
     .. |model| replace:: Filter
+    .. |mobvis_image| replace:: *Mobius Vision Image SDK*
+    .. |mobvis_video| replace:: *Mobius Vision Video SDK*
+
     .. highlight:: java
     .. role:: java(code)
         :language: java

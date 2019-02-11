@@ -1,4 +1,4 @@
-About the Technology
+About Mobius Vision Image SDK
 ======================================
 
 This SDK uses advanced algorithms for computer vision based on a technology called Deep Learning (DL).
