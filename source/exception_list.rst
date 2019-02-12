@@ -85,8 +85,42 @@ Custom model training
        | get all names of trained models returned.
 
 
-Other Exceptions
--------------------
+Third party exceptions
+------------------------
 
 It is possible to encounter exceptions raised by third party libraries that we use within the SDK.
+In particular, you might see exceptions thrown from Tensorflow. These are commonly related to problems
+with multithreading as Tensorflow only allows processing consecutively.
+
 Please contact us if you have issues with such exceptions.
+
+Other common problems
+----------------------
+If the SDK can't load, it is often because of OpenCL.
+For the Snapdragon SDK, please make sure that your device uses a Snapdragon chip and that it can access libOpenCL.so .
+Usually this .so should be included in the public lib list : /system/etc/public.libraries.txt.
+
+If you get the following error when building:
+
+::
+
+  Error:error: the input file ... libsnpe_dsp_skel.so' has no sections
+
+
+Try to add the following in your gradle file:
+
+::
+
+  buildTypes {
+  ...
+      packagingOptions {
+          doNotStrip "**/*/*.so"
+      }
+  }
+
+If you're using Proguard or DexGuard, please add this rule in your rules config file:
+
+::
+
+  -keep class com.qualcomm.**{*;}
+  -keep class ml.mobius.**{*;}
