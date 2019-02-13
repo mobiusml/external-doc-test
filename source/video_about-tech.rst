@@ -3,7 +3,7 @@ About Mobius Vision Video SDK
 
 A video can be seen as a sequence of images, which are called frames. Video content is typically recorded at 24 to 60 frames per second (fps), and typically is much larger than an image. For this reason, it makes most sense to process video content on-premise, rather than a cloud-based API, which would incur serious delays in the video processing pipeline. In some cases, such as for real-time applications, cloud-based solutions are even prohibitive.
 
-|mobvis_video| is shipped with a video shot detection module, as well as a keywording and action recognition module, which are briefly summarized in the following. 
+In the following, we give an overview over the main features of |mobvis_video|.
 
 
 Video Tagging
@@ -31,6 +31,7 @@ Below is an example of a video that can benefit from highlighting. Someone is st
     </div>
 
 
+    
 Video Shot Detection
 --------------------
 
