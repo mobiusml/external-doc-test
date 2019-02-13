@@ -16,3 +16,23 @@ td:nth-child(2) {
 td:nth-child(3) {
     width: 30%;
 }
+
+{% extends "!layout.html" %}
+  {% block footer %} {{ super() }}
+
+  <style>
+    /* topbar for mobile */
+    .wy-nav-top {
+      background: #21d19e;
+    }
+    /* Sidebar header */
+    .wy-side-nav-search {
+      background: #21d19e;
+    }
+
+    /* Sidebar */
+    /*.wy-nav-side {
+      background: #ffffff;
+    }*/
+  </style>
+{% endblock %}

@@ -88,7 +88,7 @@ the analysis internally.
 Special image categories
 ---------------------------
 This SDK can analyse a wide range of images. However, there are also limitations on
-the input data. Currently it only supports RGB images - especially higher dimensionalities
+the input data. Currently it only supports RGB images - especially higher dimensions
 such as additional depth data is not supported yet.
 There are also certain categories of industrial image data that might not give good results with this SDK.
 Also this SDK has not been certified for analysing medical data such as X-ray, CT or MRT images.
