@@ -40,31 +40,4 @@ To load the SDK call the load function :
   
 Please consider using an AsyncTask to load the SDK on start-up in your app.
   
-  
-Common Problems
-===================
-
-* If the SDK can't load, it is most likely because of OpenCL. Please make sure that your device uses a Snapdragon chip and that it can access *libOpenCL.so* (usually the .so should be in the public lib list : /system/etc/public.libraries.txt)
-* If you get the following error when building:
-
-.. code-block:: gradle
-
-     Error:error: the input file ... libsnpe_dsp_skel.so' has no sections
-  
-Try to add the following in your gradle file:
- 
-.. code-block:: gradle
-
-     buildTypes {
-     ...
-       packagingOptions {
-           doNotStrip "**/*/*.so"
-       }
-     }
-  
-If you're using Proguard or DexGuard, please add this rule in your rules config file:
-
-.. code-block:: proguard
-
-     -keep class com.qualcomm.**{*;}
-     -keep class ml.mobius.**{*;}
+In case you are experiencing trouble installing the SDK please take a look at our exception handling section. 
