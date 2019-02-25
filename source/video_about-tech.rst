@@ -30,15 +30,21 @@ Below is an example of a video that can benefit from highlighting. Someone is st
     </div>
 
 
-Our highlight detector is able to identify the point where the race actually starts, as identified by the spike of the highlight scores towards the end of the clip. Note that depending on the length and type of video, there can be numerous (or none) highlights detected by our highlights detector.
+Our highlight detector is able to identify the point where the race actually starts, as identified by the spike of the highlight scores towards the end of the clip. 
 
+.. image::
+   _static/video_highlight_motostart_score.png
+   :width: 50%
+   :align: center
+   
 
-.. raw:: html
-    
-    <div style="display: flex; justify-content: center;">
-    <img src="_static/video_highlight_motostart_score.png" alt="Highlight Score Plot" width="50%"></img>
-    <img src="_static/video_highlight_motostart_shot.gif" alt="Highlight Shot" width="50%"></img>
-    </div>
+We can then generate a gif from the highest scored section as a highlight. Note that depending on the length and type of video, there can be numerous (or none) highlights detected by our highlights detector.
+   
+   
+.. image::
+   _static/video_highlight_motostart_shot.gif
+   :width: 50%
+   :align: center
 
 
     
