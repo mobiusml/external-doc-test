@@ -28,7 +28,9 @@
    :caption: Video Modules
 
    video_about-tech
+   video_sdk_installation
    video_keywording
+   video_highlighting
 
 .. toctree::
    :maxdepth: 2
