@@ -20,14 +20,24 @@ Since content can change quite drastically within a video, we offer both 'segmen
 
 We are currently working hard to add a video highlighting feature to the |mobvis_video|. This feature allows to obtain 'highlight scores' for video segments, which can be used to identify the most important parts of a video. This can be very useful for example in order to create a summary of a video that can be shown if someone is browsing through a video database, or to identify the highlights in a recording of unedited video.
 
-Below is an example of a video that can benefit from highlighting. Someone is standing on the side of a motocross race, waiting for the race to start. Our highlight detector is able to identify the point where the race actually starts, as identified by the spike of the highlight scores towards the end of the clip. Note that depending on the length and type of video, there can be numerous (or none) highlights detected by our highlights detector.
+Below is an example of a video that can benefit from highlighting. Someone is standing on the side of a motocross race, waiting for the race to start. 
+
 
 .. raw:: html
     
     <div style="display: flex; justify-content: center;">
-    <video controls src="_static/video_highlight_motostart.mp4" width="30%" height="5%"></video>
-    <img src="_static/video_highlight_motostart_score.png" alt="Highlight Score Plot" width="30%" height="5%"></img>
-    <img src="_static/video_highlight_motostart_shot.gif" alt="Highlight Shot" width="30%" height="5%"></img>
+    <video controls src="_static/video_highlight_motostart.mp4" width="50%"></video>
+    </div>
+
+
+Our highlight detector is able to identify the point where the race actually starts, as identified by the spike of the highlight scores towards the end of the clip. Note that depending on the length and type of video, there can be numerous (or none) highlights detected by our highlights detector.
+
+
+.. raw:: html
+    
+    <div style="display: flex; justify-content: center;">
+    <img src="_static/video_highlight_motostart_score.png" alt="Highlight Score Plot" width="50%"></img>
+    <img src="_static/video_highlight_motostart_shot.gif" alt="Highlight Shot" width="50%"></img>
     </div>
 
 
