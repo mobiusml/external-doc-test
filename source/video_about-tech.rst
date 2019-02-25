@@ -20,7 +20,7 @@ Since content can change quite drastically within a video, we offer both 'segmen
 
 We are currently working hard to add a video highlighting feature to the |mobvis_video|. This feature allows to obtain 'highlight scores' for video segments, which can be used to identify the most important parts of a video. This can be very useful for example in order to create a summary of a video that can be shown if someone is browsing through a video database, or to identify the highlights in a recording of unedited video.
 
-Below is an example of a video that can benefit from highlighting. Someone is standing on the side of a motocross race, waiting for the race to start. 
+For illustration purposes we show an example of a video that can benefit from highlighting. Someone is standing on the side of a motocross race, waiting for the race to start. 
 
 
 .. raw:: html
@@ -38,7 +38,7 @@ Our highlight detector is able to identify the point where the race actually sta
    :align: center
    
 
-We can then generate a gif from the highest scored section as a highlight. Note that depending on the length and type of video, there can be numerous (or none) highlights detected by our highlights detector.
+Below is the section of the video that corresponds to the identified highlight. Note that depending on the length and type of video, there can be numerous (or none) highlights detected by our highlights detector.
    
    
 .. image::
