@@ -25,9 +25,9 @@ Below is an example of a video that can benefit from highlighting. Someone is st
 .. raw:: html
     
     <div style="display: flex; justify-content: center;">
-    <video controls src="_static/video_highlight_motostart.mp4" width="300px" height="200px"></video>
-    <img src="_static/video_highlight_motostart_score.png" alt="Highlight Score Plot" width="300px" height="200px">
-    <img src="_static/video_highlight_motostart_shot.gif" alt="Highlight Shot" width="300px" height="200px">
+    <video controls src="_static/video_highlight_motostart.mp4" width="30%" height="20%"></video>
+    <img src="_static/video_highlight_motostart_score.png" alt="Highlight Score Plot" width="30%" height="20%">
+    <img src="_static/video_highlight_motostart_shot.gif" alt="Highlight Shot" width="30%" height="20%">
     </div>
 
 
