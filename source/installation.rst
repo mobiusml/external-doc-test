@@ -10,7 +10,7 @@ Generally there are two basic versions of the SDK for Android. One version that 
 
 .. note::
 
-  As video processing is resource intensive, it is only available with a GPU version. 
+  As video processing is resource intensive, video features are only available with a GPU version build of the SDK. 
 
 
 Requirements for the CPU version
@@ -20,10 +20,10 @@ In order to run functions of the SDK on a mobile device, there are some technica
 
 Full requirements list:
 
-*   architectures: "armeabi-v7a", "arm64-v8a"
+*   Architectures: "armeabi-v7a", "arm64-v8a"
 *   Android 7.0 or higher
 *   For Python 2, version 2.7
-*   For Pyhton 3, version 3.3 or higher
+*   For Python 3, version 3.3 or higher
 
 Additional requirements for the GPU version
 ---------------------------------------------
