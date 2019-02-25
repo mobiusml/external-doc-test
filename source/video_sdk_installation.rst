@@ -1,26 +1,7 @@
-SDK Installation
+Getting started
 -------------------
 
-This is a version of the Mobius Vision SDK that uses Qualcomm's Snapdragon Neural Processing Engine SDK (SNPE) to boost performance by leveraging the GPU/DSP of Snapdragon chips. This version supports only the ``GPU``.
-
-
-Installation
-================
-
-The SDK is delivered as an AAR. Adding the AAR into an Android Studio project can be done by simply opening the project structure and add a new module *"Import .JAR or .AAR Package"* or adding the aar file to a directory (for example 'libs') and use flatDir in your build.gradle :
-
-.. code-block:: gradle
-
-     allprojects {
-       repositories {
-           ...
-           flatDir{ dirs 'libs' } //here the aar file is in the libs directory
-       }
-     }
-     dependencies {
-     ...
-     compile(name:'mobiusvisionsdk', ext:'aar')
-     }
+Before being able to use the SDK in an Android project, you need to load the SDK first. 
      
      
 Loading the SDK
