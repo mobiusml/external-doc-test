@@ -22,7 +22,7 @@ def setup(app):
 # -- Project information -----------------------------------------------------
 
 project = 'sdk_external_doc'
-copyright = '2018, Mobius Labs GmbH'
+copyright = '2018 -- 2019, Mobius Labs GmbH'
 author = 'Mobius Labs'
 
 # The short X.Y version
