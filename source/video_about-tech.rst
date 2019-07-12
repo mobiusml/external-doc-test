@@ -9,16 +9,16 @@ In the following, we give an overview over the main features of |mobvis_video|.
 Video Tagging
 -------------
 
-|mobvis_video| offers a lightweight keywording model, which can identify over 5000 concepts and emotions in videos in real-time.
+|mobvis_video| offers a lightweight keywording model, which can identify over 5000 concepts, emotions, and actions in videos in real-time.
 
 Since content can change quite drastically within a video, we offer both 'segment-level' as well as 'video-level' keywording. As the names suggest, segment-level keywording finds keywords for each individual segment, whereas video-level keywording provides keywords that are representative of the whole video. See the section 'Video Shot Detection' at the end of this page for more information.
 
 
 
-(Soon) Highlights Detection
+Highlights Detection
 ----------------------------
 
-We are currently working hard to add a video highlighting feature to the |mobvis_video|. This feature allows to obtain 'highlight scores' for video segments, which can be used to identify the most important parts of a video. This can be very useful for example in order to create a summary of a video that can be shown if someone is browsing through a video database, or to identify the highlights in a recording of unedited video.
+This feature allows to obtain 'highlight scores' for video segments, which can be used to identify the most important parts of a video. This can be very useful for example in order to create a summary of a video that can be shown if someone is browsing through a video database, or to identify the highlights in a recording of unedited video.
 
 For illustration purposes we show an example of a video that can benefit from highlighting. Someone is standing on the side of a motocross race, waiting for the race to start. 
 
@@ -65,5 +65,5 @@ The |mobvis_video| features a highly efficient shot boundary detector. With the 
 
 .. note::
     
-If the shot boundary selection is switched off, the video will be segmented using *fixed* temporal segments (e.g., 3 seconds).
+    If the shot boundary selection is switched off, the video will be segmented using *fixed* temporal segments (e.g., 3 seconds).
 
